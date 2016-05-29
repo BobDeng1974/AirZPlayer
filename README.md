@@ -1,2 +1,4 @@
 # AirZPlayer
-A light-wight musi player based on libZPlay.
+A lightweight music player based on libZPlay.
+
+## UI designed by WPF
