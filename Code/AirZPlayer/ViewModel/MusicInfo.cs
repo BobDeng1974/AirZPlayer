@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 
-namespace AirZPlayer
+namespace AirZPlayer.ViewModel
 {
     class MusicInfo: ViewModelBase
     {
@@ -29,14 +29,14 @@ namespace AirZPlayer
             }
         }
 
-        public string Name
+        public string Title
         {
             set
             {
                 if (_name != value)
                 {
                     _name = value;
-                    RaisePropertyChanged(nameof(Name));
+                    RaisePropertyChanged(nameof(Title));
                 }
             }
             get
