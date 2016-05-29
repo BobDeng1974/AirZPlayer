@@ -1,4 +1,5 @@
-﻿using System;
+﻿using libZPlay;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,14 @@ namespace AirZPlayer
         public MainWindow()
         {
             InitializeComponent();
+
+
+            if (player.OpenFile(@"C:\Users\zhangxin\Downloads\邓紫棋 - 泡沫.flac", TStreamFormat.sfAutodetect) == false)
+            {
+                // error
+            }
+            player.StartPlayback();
         }
+        ZPlay player = new ZPlay();
     }
 }
