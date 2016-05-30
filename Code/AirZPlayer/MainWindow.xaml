@@ -5,8 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AirZPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="80" Width="300" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CornerRadius="6" CaptionHeight="30" GlassFrameThickness="1"/>
+    </WindowChrome.WindowChrome>
+    <Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
+            <Grid>
+                <ContentPresenter />
+                <Border VerticalAlignment="Stretch"/>
+            </Grid>
+        </ControlTemplate>
+    </Window.Template>
+    <Border CornerRadius="6" BorderBrush="White" BorderThickness="1" WindowChrome.IsHitTestVisibleInChrome="True">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#7FDCDADA" Offset="0.224"/>
+                <GradientStop Color="#7FE4CDCD" Offset="1"/>
+                <GradientStop Color="#7FEACDCD"/>
+                <GradientStop Color="#7FE2BCBC" Offset="0.838"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="0.7*"/>
+                </Grid.ColumnDefinitions>
+                <Image Width="50" Height="50" Grid.Column="0" Margin="10"/>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="title" Margin="5"/>
+                    <TextBlock Text="zhuan ji" Margin="5"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <ProgressBar Grid.Column="0"/>
+                        <TextBlock Grid.Column="1" Text="2:20"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid x:Name="PalyerControl">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar Orientation="Vertical" Width="10" Margin="3"/>
+                <TextBlock Grid.Column ="1" Text="2:44"/>
+                <Grid Grid.Column ="2" Margin="10 10 10 30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Previous"/>
+                    <Button Grid.Column ="1" Content="Play/Pause"/>
+                    <Button Grid.Column ="2" Content="Next"/>
+                </Grid>
+                <Grid  Grid.Column ="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 2 6 0">
+                        <Button Content="-"/>
+                        <Button Content="M"/>
+                        <Button Content="T"/>
+                        <Button Content="x"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>

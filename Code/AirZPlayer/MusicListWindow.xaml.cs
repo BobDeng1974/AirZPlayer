@@ -17,7 +17,7 @@ namespace AirZPlayer
     /// <summary>
     /// MusicListWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MusicListWindow : Window
+    public partial class MusicListWindow
     {
         public MusicListWindow()
         {

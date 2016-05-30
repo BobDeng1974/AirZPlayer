@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AirZPlayer"
         mc:Ignorable="d"
-        Title="MusicListWindow" Height="300" Width="300">
+        Title="MusicListWindow" Height="300" Width="300" 
+        BorderThickness="1" 
+        Style="{DynamicResource CustomWindow}" >
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="20"/>
+    </WindowChrome.WindowChrome>
+    
     <Window.Resources>
         <DataTemplate x:Key="Style.MusicListItemTemplate">
             <Grid>
@@ -81,7 +87,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <ListBox ItemsSource="{Binding MusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}"></ListBox>
+    <Grid >
+        <ListBox Grid.Row="1" ItemsSource="{Binding MusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" />
     </Grid>
 </Window>
