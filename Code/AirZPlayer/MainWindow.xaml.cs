@@ -56,6 +56,7 @@ namespace AirZPlayer
                     Message($"无法打开:{musicItem.Path}");
                 }
             });
+            _vm.CustomDropHandler = new FileDropHandler();
         }
 
         private void Message(string msg)

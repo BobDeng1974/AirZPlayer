@@ -26,5 +26,7 @@ namespace AirZPlayer.ViewModel
         public ICommand Pause { set; get; }
         public ICommand Stop { set; get; }
         public ICommand Play { set; get; }
+        public FileDropHandler CustomDropHandler { get; set; }
+
     }
 }

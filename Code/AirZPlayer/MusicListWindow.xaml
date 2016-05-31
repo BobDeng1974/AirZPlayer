@@ -3,11 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dd="clr-namespace:GongSolutions.Wpf.DragDrop;assembly=GongSolutions.Wpf.DragDrop"
         xmlns:local="clr-namespace:AirZPlayer"
         mc:Ignorable="d"
         Title="MusicListWindow" Height="300" Width="300" 
         BorderThickness="1" 
-        Style="{DynamicResource CustomWindow}" >
+        Style="{DynamicResource CustomWindow}"
+        AllowDrop="True" dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding CustomDropHandler}" >
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20"/>
     </WindowChrome.WindowChrome>
@@ -88,6 +90,7 @@
         </Style>
     </Window.Resources>
     <Grid >
-        <ListBox Grid.Row="1" ItemsSource="{Binding MusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" />
+        <ListBox ItemsSource="{Binding MusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" 
+                 />
     </Grid>
 </Window>

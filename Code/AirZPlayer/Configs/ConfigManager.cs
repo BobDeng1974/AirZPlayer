@@ -47,7 +47,7 @@ namespace AirZPlayer
                     if (!string.IsNullOrWhiteSpace(strFileContent))
                     {
                         //反序列化为对象
-                        Config = JsonConvert.DeserializeObject<Config>(strFileContent)??default(Config);
+                        Config = JsonConvert.DeserializeObject<Config>(strFileContent)??new Config();
                     }
                 }
             }
