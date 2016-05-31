@@ -52,7 +52,7 @@ namespace AirZPlayer
         {
             get
             {
-                return _musicInfos;
+                return _musicInfos ?? (_musicInfos = new ObservableCollection<MusicInfoViewModel>());
             }
 
             set
@@ -60,6 +60,10 @@ namespace AirZPlayer
                 if (_musicInfos != value)
                 {
                     _musicInfos = value;
+                    if (value == null)
+                    {
+                        _musicInfos = new ObservableCollection<MusicInfoViewModel>();
+                    }
                     RaisePropertyChanged(nameof(MusicInfos));
                 }
             }

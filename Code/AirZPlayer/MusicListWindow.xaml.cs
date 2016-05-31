@@ -59,7 +59,11 @@ namespace AirZPlayer
                         }
                     }
 
-                    MusicListManager.Instance.AddMusicList("aaa", true, files);
+                    MusicListManager.Instance.AddMusicList("aaa", true, files).ContinueWith(t=>
+                    {
+                        //保存
+                        ConfigManager.Instance.Save();
+                    });
 #if DEBUG
                     files.ForEach(file=>Debug.WriteLine(file));
 #endif

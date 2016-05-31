@@ -50,19 +50,13 @@ namespace AirZPlayer
 
         public void UpdateMusicInfo()
         {
-            Task.Run(() =>
-            {
-                var musicGroups = MusicListManager.Instance.LoadMusicList();
-                var musics = (musicGroups.FirstOrDefault() ?? new MusicsGroup()).MusicInfos;
-                if (musics != null)
-                {
-                    Dispatcher.BeginInvoke(new Action(() =>
-                    {
-                        _vm.MusicList = musics;
-                    }));
-                }
-
-            });
+             MusicListManager.Instance.LoadMusicList().ContinueWith(t=> 
+             {
+                 if (t.IsFaulted)
+                 {
+                     Message($"加载音乐列表错误：{t.Exception.HResult:X}");
+                 }
+             });
         }
         
 

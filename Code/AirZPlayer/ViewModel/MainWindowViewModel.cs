@@ -6,22 +6,20 @@ namespace AirZPlayer.ViewModel
 {
     class MainWindowViewModel: ViewModelBase
     {
-        public ObservableCollection<MusicInfoViewModel> _musicList = new ObservableCollection<MusicInfoViewModel>();
-        public ObservableCollection<MusicInfoViewModel> MusicList
+        public ReadOnlyObservableCollection<MusicsGroup> MusicList => MusicListManager.Instance.MusicList;
+        public ObservableCollection<MusicsGroup> CurrentMusicList
         {
-            set
-            {
-                if (_musicList != value)
-                {
-                    _musicList = value;
-                    RaisePropertyChanged(nameof(MusicList));
-                }
-            }
             get
             {
-                return _musicList;
+                return _currentMusicList;
+            }
+            set
+            {
+                _currentMusicList = value;
+                RaisePropertyChanged(nameof(CurrentMusicList));
             }
         }
+        ObservableCollection<MusicsGroup> _currentMusicList;
 
         public ICommand Pause { set; get; }
         public ICommand Stop { set; get; }

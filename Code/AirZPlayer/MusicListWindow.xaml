@@ -90,7 +90,7 @@
         </Style>
     </Window.Resources>
     <Grid >
-        <ListBox ItemsSource="{Binding MusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" 
+        <ListBox ItemsSource="{Binding CurrentMusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" 
                  />
     </Grid>
 </Window>

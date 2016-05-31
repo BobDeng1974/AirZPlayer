@@ -13,7 +13,7 @@ namespace AirZPlayer
         [DataMember(Name ="Version")]
         public string Version { set; get; } = "0.1";
         [DataMember(Name = "MusicList")]
-        public List<MusicDirectoryInfo> MusicList { set; get; }
+        public List<MusicDirectoryInfo> MusicList { set; get; } = new List<MusicDirectoryInfo>();
     }
 
     [DataContract(Name= "MusicDirectoryInfo")]

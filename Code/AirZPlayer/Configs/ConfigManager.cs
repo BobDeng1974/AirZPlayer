@@ -56,13 +56,17 @@ namespace AirZPlayer
         {
             get
             {
-                return _config;
+                return _config??(_config = new Config());
             }
             private set
             {
                 _config = value;
+                if (value == null)
+                {
+                    _config = new Config();
+                }
             }
-        }
+        } 
         private Config _config;
     }
 }
