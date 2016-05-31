@@ -14,6 +14,8 @@ namespace AirZPlayer
         static MusicListManager()
         {
         }
+        private MusicListManager()
+        { }
 
         public List<MusicsGroup> LoadMusicList()
         {
@@ -28,28 +30,22 @@ namespace AirZPlayer
                     {
                         IsDefault = musicLists.IsDefault,
                         Name = musicLists.GroupName,
-                        MusicInfos = new ObservableCollection<MusicInfo>()
+                        MusicInfos = new ObservableCollection<MusicInfoViewModel>()
                     };
-                    musicLists.PathList.ForEach(path => 
+                    musicLists.MusicInfos.ForEach(musicInfo => 
                     {
-                        //读取音乐信息
-                        TID3Info info = new TID3Info();
-
-                        if(MusicPlayer.Player.LoadFileID3(path, TStreamFormat.sfAutodetect, TID3Version.id3Version2, ref info))
-                        {
-                            musicGroup.MusicInfos.Add(new MusicInfo()
-                            {
-                                Id = Guid.NewGuid().ToString("N"),
-                                Title = info.Title,
-                                Path = path,
-                            });
-                        }
+                        musicGroup.MusicInfos.Add(musicInfo.ToVM());
                     });
                     musicGroups.Add(musicGroup);
                 }
             });
 
             return musicGroups;
+        }
+
+        public void AddMusicList(string strGroupName, bool isDefault, List<string> pathList)
+        {
+
         }
         public string CurrentPlayingMusicId { set; get; }
 

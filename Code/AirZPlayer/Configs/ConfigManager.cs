@@ -15,31 +15,13 @@ namespace AirZPlayer
         private static Lazy<ConfigManager> _instance = new Lazy<ConfigManager>(() => new ConfigManager());
         public static ConfigManager Instance => _instance.Value;
 
+        private ConfigManager()
+        { }
+
         public void Load()
         {
             try
             {
-                //test
-                //var a = new Config() {
-                //    Version = "0.4",
-                //    MusicList = new List<MusicDirectoryInfo>()
-                //    {
-                //        new MusicDirectoryInfo()
-                //        {
-                //            IsDefault = true,
-                //            GroupName = "aaaaa",
-                //            PathList = new List<string>()
-                //            {
-                //                "p11111111",
-                //                "p22222222222",
-                //                "p333333333333333"
-                //            }
-                //        }
-                //    }
-                //};
-                //var ss = JsonConvert.SerializeObject(a);
-                //File.WriteAllText("ccc.json", ss);
-
                 var strConfigPath = ConfigName;
                 if (File.Exists(strConfigPath))
                 {
@@ -53,11 +35,23 @@ namespace AirZPlayer
             }
             catch(Exception ex)
             {
-                Config = default(Config);
+                Config = new Config();
                 Debug.WriteLine(ex);
             }
         }
 
+        public void Save()
+        {
+            var strConfigPath = ConfigName;
+            try
+            {
+                File.WriteAllText(strConfigPath, JsonConvert.SerializeObject(Config));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+        }
         public Config Config
         {
             get

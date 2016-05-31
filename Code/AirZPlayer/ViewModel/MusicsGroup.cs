@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AirZPlayer.ViewModel
+namespace AirZPlayer
 {
     class MusicsGroup: ViewModelBase
     {
         private string _name;
         private bool _isDefault;
-        private ObservableCollection<MusicInfo> _musicInfos;
+        private ObservableCollection<MusicInfoViewModel> _musicInfos;
 
         public string Name
         {
@@ -48,7 +48,7 @@ namespace AirZPlayer.ViewModel
             }
         }
 
-        public ObservableCollection<MusicInfo> MusicInfos
+        public ObservableCollection<MusicInfoViewModel> MusicInfos
         {
             get
             {

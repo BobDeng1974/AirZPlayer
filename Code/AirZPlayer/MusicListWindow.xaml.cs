@@ -59,6 +59,7 @@ namespace AirZPlayer
                         }
                     }
 
+                    MusicListManager.Instance.AddMusicList("aaa", true, files);
 #if DEBUG
                     files.ForEach(file=>Debug.WriteLine(file));
 #endif

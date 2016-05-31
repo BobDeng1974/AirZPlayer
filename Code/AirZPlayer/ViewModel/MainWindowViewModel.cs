@@ -6,8 +6,8 @@ namespace AirZPlayer.ViewModel
 {
     class MainWindowViewModel: ViewModelBase
     {
-        public ObservableCollection<MusicInfo> _musicList = new ObservableCollection<MusicInfo>();
-        public ObservableCollection<MusicInfo> MusicList
+        public ObservableCollection<MusicInfoViewModel> _musicList = new ObservableCollection<MusicInfoViewModel>();
+        public ObservableCollection<MusicInfoViewModel> MusicList
         {
             set
             {

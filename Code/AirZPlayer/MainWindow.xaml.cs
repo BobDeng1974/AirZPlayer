@@ -21,19 +21,7 @@ namespace AirZPlayer
             DataContext = _vm;
 
             Loaded += MainWindow_Loaded;
-            Task.Run(() =>
-            {
-                var musicGroups = MusicListManager.Instance.LoadMusicList();
-                var musics = (musicGroups.FirstOrDefault()??new MusicsGroup()).MusicInfos;
-                if (musics != null)
-                {
-                    Dispatcher.BeginInvoke(new Action(() =>
-                    {
-                        _vm.MusicList = musics;
-                    }));
-                }
-
-            });
+            UpdateMusicInfo();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -45,19 +33,38 @@ namespace AirZPlayer
 
         private void InitCommand()
         {
-            _vm.Play = new GalaSoft.MvvmLight.CommandWpf.RelayCommand<MusicInfo>(musicItem => 
+            _vm.Play = new GalaSoft.MvvmLight.CommandWpf.RelayCommand<MusicInfoViewModel>(musicItem => 
             {
-                if (MusicPlayer.Player.OpenFile(musicItem.Path, TStreamFormat.sfAutodetect))
+                try
                 {
-                    MusicPlayer.Player.StartPlayback();
+                    MusicPlayer.Play(musicItem);
                 }
-                else
+                catch (MusicPlayException)
                 {
-                    Message($"无法打开:{musicItem.Path}");
+                    musicItem.IsLost = true;
+                    Message($"无法播放{musicItem?.Path}");
                 }
             });
             _vm.CustomDropHandler = new FileDropHandler();
         }
+
+        public void UpdateMusicInfo()
+        {
+            Task.Run(() =>
+            {
+                var musicGroups = MusicListManager.Instance.LoadMusicList();
+                var musics = (musicGroups.FirstOrDefault() ?? new MusicsGroup()).MusicInfos;
+                if (musics != null)
+                {
+                    Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        _vm.MusicList = musics;
+                    }));
+                }
+
+            });
+        }
+        
 
         private void Message(string msg)
         {

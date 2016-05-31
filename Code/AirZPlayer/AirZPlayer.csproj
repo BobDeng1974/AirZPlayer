@@ -84,8 +84,11 @@
     </ApplicationDefinition>
     <Compile Include="Configs\Config.cs" />
     <Compile Include="Configs\ConfigManager.cs" />
+    <Compile Include="Exceptions\MusicExceptions.cs" />
+    <Compile Include="Extensions\MusicInfoExtensions.cs" />
     <Compile Include="libZPlay\MusicPlayer.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MusicInfoViewModel.cs" />
     <Compile Include="ViewModel\MusicsGroup.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
