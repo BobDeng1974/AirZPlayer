@@ -20,7 +20,7 @@ namespace AirZPlayer
             List<MusicsGroup> musicGroups = new List<MusicsGroup>();
             //TODO: 读取配置文件中歌曲列表信息
             ConfigManager.Instance.Load();
-            ConfigManager.Instance.Config.MusicList?.ForEach(musicLists =>
+            ConfigManager.Instance.Config?.MusicList?.ForEach(musicLists =>
             {
                 if(musicLists != null)
                 {
