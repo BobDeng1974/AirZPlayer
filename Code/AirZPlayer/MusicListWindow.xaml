@@ -51,7 +51,7 @@
                                 >
                             <Border.InputBindings>
                                 <MouseBinding MouseAction="LeftDoubleClick"
-                                  Command="{Binding DataContext.Play, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                                  Command="{Binding DataContext.Play, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
                                   CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" />
                             </Border.InputBindings>
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
@@ -88,8 +88,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <DataTemplate x:Key="MusicListDataTemplate">
-            <Grid Background="Black" Height="20">
+            <Grid>
                 <TextBlock Text="{Binding Name}" d:DataContext="{Binding Source={StaticResource MainWindowViewModelSampleDataSource}}" />
             </Grid>
         </DataTemplate>
@@ -97,7 +96,6 @@
             <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TabItem}">
                         <ControlTemplate.Resources>
                             <Storyboard x:Key="HoverOn">
                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="HoverBorder" Storyboard.TargetProperty="(UIElement.Opacity)">
@@ -147,7 +145,6 @@
                                 </Border.Background>
                             </Border>
                             <Grid>
-                                <ContentPresenter x:Name="ContentSite" RecognizesAccessKey="True" ContentSource="Header" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" Margin="6,1,6,1" VerticalAlignment="Center" />
                             </Grid>
                         </Grid>
                         <ControlTemplate.Triggers>
@@ -232,7 +229,6 @@
                                 <Setter Property="Opacity" TargetName="grid" Value="0.3"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
-                    </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
@@ -366,6 +362,6 @@
         </Style>
     </Window.Resources>
     <Grid >
-        <TabControl ItemTemplate="{DynamicResource MusicListDataTemplate}" ItemsSource="{Binding MusicList}" TabStripPlacement="Left" ItemContainerStyle="{DynamicResource MusicListTabItemStyle}" Style="{DynamicResource MusicListTabControlStyle}"></TabControl>
+        <ListBox ItemsSource="{Binding CurrentMusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" 
     </Grid>
 </Window>

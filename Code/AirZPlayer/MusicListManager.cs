@@ -43,7 +43,7 @@ namespace AirZPlayer
                         var musicGroup = new MusicsGroup()
                         {
                             IsDefault = musicLists.IsDefault,
-                            Name = musicLists.GroupName,
+                            GroupName = musicLists.GroupName,
                             MusicInfos = new ObservableCollection<MusicInfoViewModel>()
                         };
                         musicLists.MusicInfos.ForEach(musicInfo => 
@@ -68,7 +68,7 @@ namespace AirZPlayer
                 {
                     return;
                 }
-                var vmGroup = _musicList.ToList().Where(g => isDefault ? g.IsDefault : g.Name.Equals(strGroupName)).FirstOrDefault();
+                var vmGroup = _musicList.ToList().Where(g => isDefault ? g.IsDefault : g.GroupName.Equals(strGroupName)).FirstOrDefault();
                 var group = ConfigManager.Instance.Config?.MusicList?.Where(g => isDefault ? g.IsDefault : g.GroupName.Equals(strGroupName)).FirstOrDefault();
 
                 Debug.Assert((group == null && vmGroup == null) || (group != null && vmGroup != null));
@@ -76,7 +76,7 @@ namespace AirZPlayer
                 {
                     vmGroup = new MusicsGroup()
                     {
-                        Name = strGroupName,
+                        GroupName = strGroupName,
                         IsDefault = isDefault,
                     };
                     App.Current.Dispatcher.Invoke(() =>

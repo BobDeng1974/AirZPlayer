@@ -10,23 +10,23 @@ namespace AirZPlayer
 {
     internal class MusicsGroup : ViewModelBase
     {
-        private string _name;
+        private string _groupName;
         private bool _isDefault;
         private ObservableCollection<MusicInfoViewModel> _musicInfos;
 
-        public string Name
+        public string GroupName
         {
             get
             {
-                return _name;
+                return _groupName;
             }
 
             set
             {
-                if (_name != value)
+                if (_groupName != value)
                 {
-                    _name = value;
-                    RaisePropertyChanged(nameof(Name));
+                    _groupName = value;
+                    RaisePropertyChanged(nameof(GroupName));
                 }
             }
         }
