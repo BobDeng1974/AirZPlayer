@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AirZPlayer
 {
-    class MusicInfoViewModel: MusicInfo
+    internal class MusicInfoViewModel : MusicInfo
     {
         bool _isLost;
         bool _isSelected;

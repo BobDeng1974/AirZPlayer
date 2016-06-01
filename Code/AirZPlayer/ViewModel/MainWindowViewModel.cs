@@ -2,9 +2,9 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace AirZPlayer.ViewModel
+namespace AirZPlayer
 {
-    class MainWindowViewModel: ViewModelBase
+    internal class MainWindowViewModel: ViewModelBase
     {
         public ReadOnlyObservableCollection<MusicsGroup> MusicList => MusicListManager.Instance.MusicList;
         public ObservableCollection<MusicsGroup> CurrentMusicList

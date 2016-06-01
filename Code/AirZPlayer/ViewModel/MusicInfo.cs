@@ -10,7 +10,7 @@ using libZPlay;
 namespace AirZPlayer
 {
     [DataContract]
-    class MusicInfo: ViewModelBase
+    internal class MusicInfo : ViewModelBase
     {
         private string _id;
         private string _path;

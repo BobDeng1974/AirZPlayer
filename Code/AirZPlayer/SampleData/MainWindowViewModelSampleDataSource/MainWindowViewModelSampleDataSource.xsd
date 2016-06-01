@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+   *********  请勿修改此文件   *********
+   此文件由设计工具再生成。更改
+   此文件可能会导致错误。
+-->
+<xs:schema xmlns:blend="http://schemas.microsoft.com/expression/blend/2008" xmlns:tns="Expression.Blend.SampleData.MainWindowViewModelSampleDataSource" targetNamespace="Expression.Blend.SampleData.MainWindowViewModelSampleDataSource" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MainWindowViewModelSampleDataSource" type="tns:MainWindowViewModelSampleDataSource" />
+  <xs:complexType name="MainWindowViewModelSampleDataSource">
+    <xs:sequence>
+      <xs:element name="MusicList" type="tns:MusicList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MusicList">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="MusicListItem" type="tns:MusicListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MusicListItem">
+    <xs:sequence>
+      <xs:element name="MusicGroup" type="tns:MusicGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MusicGroup">
+    <xs:sequence>
+      <xs:element name="MusicInfos" type="tns:MusicInfos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MusicInfos">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="MusicInfosItem" type="tns:MusicInfosItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MusicInfosItem" />
+</xs:schema>

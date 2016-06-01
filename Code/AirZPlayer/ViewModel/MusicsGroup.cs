@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AirZPlayer
 {
-    class MusicsGroup: ViewModelBase
+    internal class MusicsGroup : ViewModelBase
     {
         private string _name;
         private bool _isDefault;
