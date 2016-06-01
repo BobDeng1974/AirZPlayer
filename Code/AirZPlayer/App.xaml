@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application x:Class="AirZPlayer.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:AirZPlayer" StartupUri="MainWindow.xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:AirZPlayer" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.MainWindowViewModelSampleDataSource" x:Class="AirZPlayer.App" StartupUri="MainWindow.xaml" d1p1:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -12,7 +12,9 @@
                 <ResourceDictionary Source="Themes\ShinyBlue.xaml" />
                 <ResourceDictionary Source="Themes\ShinyRed.xaml" />
                 <ResourceDictionary Source="Themes\WhistlerBlue.xaml" />
-                --></ResourceDictionary.MergedDictionaries>
+                -->
+            </ResourceDictionary.MergedDictionaries>
+            <SampleData:MainWindowViewModelSampleDataSource x:Key="MainWindowViewModelSampleDataSource" d:IsDataSource="True"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

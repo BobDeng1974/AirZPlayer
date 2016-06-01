@@ -9,11 +9,11 @@
         Title="MusicListWindow" Height="300" Width="300" 
         BorderThickness="1" 
         Style="{DynamicResource CustomWindow}"
-        AllowDrop="True" dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding CustomDropHandler}" >
+        AllowDrop="True" dd:DragDrop.IsDropTarget="True" dd:DragDrop.DropHandler="{Binding CustomDropHandler}" d:DataContext="{d:DesignData /SampleData/MainWindowViewModelSampleDataSource/MainWindowViewModelSampleDataSource.xaml}" >
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20"/>
     </WindowChrome.WindowChrome>
-    
+
     <Window.Resources>
         <DataTemplate x:Key="Style.MusicListItemTemplate">
             <Grid>
@@ -51,7 +51,7 @@
                                 >
                             <Border.InputBindings>
                                 <MouseBinding MouseAction="LeftDoubleClick"
-                                  Command="{Binding DataContext.Play, RelativeSource={RelativeSource AncestorType={x:Type ListBox}}}"
+                                  Command="{Binding DataContext.Play, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
                                   CommandParameter="{Binding DataContext, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" />
                             </Border.InputBindings>
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
@@ -88,9 +88,18 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <DataTemplate x:Key="MusicListGroupItemTemplate">
+            <Grid>
+                <TextBlock Text="{Binding GroupName}" TextWrapping="NoWrap"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="MusicListContentTemplate">
+            <Grid>
+                <ListBox ItemsSource="{Binding MusicInfos}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" />
+            </Grid>
+        </DataTemplate>
     </Window.Resources>
     <Grid >
-        <ListBox ItemsSource="{Binding CurrentMusicList}" ItemTemplate="{DynamicResource Style.MusicListItemTemplate}" ItemContainerStyle="{DynamicResource Style.MusicListItem}" BorderThickness="0" Background="{x:Null}" 
-                 />
+        <TabControl ItemTemplate="{DynamicResource MusicListGroupItemTemplate}" ContentTemplate="{DynamicResource MusicListContentTemplate}" TabStripPlacement="Left" ItemsSource="{Binding MusicList}"/>
     </Grid>
 </Window>

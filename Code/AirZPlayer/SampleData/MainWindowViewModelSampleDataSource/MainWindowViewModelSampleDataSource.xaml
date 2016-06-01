@@ -1,0 +1,99 @@
+﻿<!--
+   *********  请勿修改此文件   *********
+   此文件由设计工具再生成。更改
+   此文件可能会导致错误。
+-->
+<SampleData:MainWindowViewModelSampleDataSource xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.MainWindowViewModelSampleDataSource">
+	<SampleData:MainWindowViewModelSampleDataSource.MusicList>
+		<SampleData:MusicListItem GroupName="Cras nam class aenean">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Cras maecenas aenean" Path="Aenean aliquam"/>
+				<SampleData:MusicInfosItem Title="Nam duis sed dis" Path="Integer class quisque"/>
+				<SampleData:MusicInfosItem Title="Aliquam praesent accumsan" Path="Cras mauris duis maecenas"/>
+				<SampleData:MusicInfosItem Title="Mauris integer class" Path="Nam vivamus"/>
+				<SampleData:MusicInfosItem Title="Est quisque vivamus" Path="Sed dis"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Mauris duis">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Nunc amet curae aliquam" Path="Est aliquam curae"/>
+				<SampleData:MusicInfosItem Title="Donec bibendum ante" Path="Donec nunc amet"/>
+				<SampleData:MusicInfosItem Title="Arcu hac diam dictumst" Path="Hac nullam aptent"/>
+				<SampleData:MusicInfosItem Title="Etiam aliquet leo" Path="Ante leo"/>
+				<SampleData:MusicInfosItem Title="Fusce nullam" Path="Mus aliquet blandit"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Maecenas aliquam praesent">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Lorem eget blandit elit" Path="Etiam praesent fusce auctor"/>
+				<SampleData:MusicInfosItem Title="Eleifend enim erat mus" Path="Lorem accumsan arcu"/>
+				<SampleData:MusicInfosItem Title="Eros facilisi morbi nulla" Path="Morbi bibendum"/>
+				<SampleData:MusicInfosItem Title="Proin augue aptent" Path="Nec diam"/>
+				<SampleData:MusicInfosItem Title="Nec nibh faucibus" Path="Congue dictumst eleifend"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Sed nunc">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Nisi auctor habitant" Path="Cursus nulla dictum proin"/>
+				<SampleData:MusicInfosItem Title="Commodo dolor" Path="Lectus facilisi"/>
+				<SampleData:MusicInfosItem Title="Fames conubia nisl" Path="Augue libero"/>
+				<SampleData:MusicInfosItem Title="Non inceptos per" Path="Dolor eget non"/>
+				<SampleData:MusicInfosItem Title="Congue interdum cubilia felis" Path="Faucibus fames"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Curae donec">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Lobortis nunc" Path="Felis per ipsum"/>
+				<SampleData:MusicInfosItem Title="Odio ipsum cursus" Path="Ligula elit"/>
+				<SampleData:MusicInfosItem Title="Nascetur sed sem" Path="Sed justo sem"/>
+				<SampleData:MusicInfosItem Title="Orci justo dictum lectus" Path="Lacus litora luctus"/>
+				<SampleData:MusicInfosItem Title="Dapibus pharetra libero ligula" Path="Enim erat commodo"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Etiam dis fusce">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Placerat pede egestas" Path="Conubia cubilia"/>
+				<SampleData:MusicInfosItem Title="Euismod pulvinar litora" Path="Lorem eros"/>
+				<SampleData:MusicInfosItem Title="Feugiat gravida quam luctus" Path="Magnis nibh nisi"/>
+				<SampleData:MusicInfosItem Title="Magnis quis" Path="Sit vel mattis"/>
+				<SampleData:MusicInfosItem Title="Urna sagittis mattis senectus" Path="Mauris mollis"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Nullam amet ante">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Mauris sociosqu lacus" Path="Dapibus nisl egestas montes"/>
+				<SampleData:MusicInfosItem Title="Sit lorem" Path="Nam magna"/>
+				<SampleData:MusicInfosItem Title="Iaculis mollis" Path="Nostra massa"/>
+				<SampleData:MusicInfosItem Title="Vel cras magna montes" Path="Habitant metus"/>
+				<SampleData:MusicInfosItem Title="Duis suscipit" Path="Morbi neque"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Accumsan est hac leo">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Torquent ultrices" Path="Inceptos ornare"/>
+				<SampleData:MusicInfosItem Title="Nunc nostra" Path="Netus interdum nunc"/>
+				<SampleData:MusicInfosItem Title="Amet ante arcu" Path="Lobortis sed odio"/>
+				<SampleData:MusicInfosItem Title="Nam vehicula ornare diam" Path="Nulla orci euismod feugiat"/>
+				<SampleData:MusicInfosItem Title="Platea massa sed volutpat" Path="Nascetur dis platea primis"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Bibendum integer aptent quisque">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Metus lacinia laoreet morbi" Path="Pede quam pharetra"/>
+				<SampleData:MusicInfosItem Title="Natoque primis maecenas" Path="Placerat pulvinar"/>
+				<SampleData:MusicInfosItem Title="Praesent rutrum neque" Path="Gravida porta est quis"/>
+				<SampleData:MusicInfosItem Title="Eget dis" Path="Iaculis purus"/>
+				<SampleData:MusicInfosItem Title="Sapien posuere semper netus" Path="Hac lacinia laoreet"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+		<SampleData:MusicListItem GroupName="Arcu lorem vivamus">
+			<SampleData:MusicListItem.MusicInfos>
+				<SampleData:MusicInfosItem Title="Est nulla accumsan porta" Path="Sagittis urna risus"/>
+				<SampleData:MusicInfosItem Title="Potenti elit pretium" Path="Senectus cras"/>
+				<SampleData:MusicInfosItem Title="Hac sociis enim" Path="Sociosqu natoque duis suscipit"/>
+				<SampleData:MusicInfosItem Title="Rhoncus taciti" Path="Nunc velit vitae leo"/>
+				<SampleData:MusicInfosItem Title="Purus leo tellus bibendum" Path="Rutrum class mus sapien"/>
+			</SampleData:MusicListItem.MusicInfos>
+		</SampleData:MusicListItem>
+	</SampleData:MainWindowViewModelSampleDataSource.MusicList>
+</SampleData:MainWindowViewModelSampleDataSource>
