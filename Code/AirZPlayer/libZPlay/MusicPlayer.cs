@@ -46,6 +46,15 @@ namespace AirZPlayer
                 throw new MusicPlayException();
             }
         }
-            
+
+        public static void Pause()
+        {
+            Player.PausePlayback();
+        }
+
+        public static void Stop()
+        {
+            Player.StopPlayback();
+        }
     }
 }

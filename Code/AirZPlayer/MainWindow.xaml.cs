@@ -6,7 +6,7 @@ using System.Windows;
 using AirZPlayer.ViewModel;
 using System.Linq;
 using System.Collections.Generic;
-
+using MvvmLight=GalaSoft.MvvmLight.CommandWpf;
 namespace AirZPlayer
 {
     /// <summary>
@@ -33,7 +33,7 @@ namespace AirZPlayer
 
         private void InitCommand()
         {
-            _vm.Play = new GalaSoft.MvvmLight.CommandWpf.RelayCommand<MusicInfoViewModel>(musicItem => 
+            Commands.Play = new MvvmLight.RelayCommand<MusicInfoViewModel>(musicItem => 
             {
                 try
                 {
@@ -45,6 +45,8 @@ namespace AirZPlayer
                     Message($"无法播放{musicItem?.Path}");
                 }
             });
+
+            Commands.Pause = new MvvmLight.RelayCommand(MusicPlayer.Pause);
             _vm.CustomDropHandler = new FileDropHandler();
         }
 

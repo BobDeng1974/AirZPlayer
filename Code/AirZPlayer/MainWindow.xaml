@@ -49,11 +49,11 @@
             <Grid x:Name="PalyerControl">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="61*"/>
+                    <ColumnDefinition Width="185*"/>
+                    <ColumnDefinition Width="44*"/>
                 </Grid.ColumnDefinitions>
-                <ProgressBar Orientation="Vertical" Width="10" Margin="3"/>
+                <ProgressBar Orientation="Vertical" Margin="3"/>
                 <TextBlock Grid.Column ="1" Text="2:44"/>
                 <Grid Grid.Column ="2" Margin="10 10 10 30">
                     <Grid.ColumnDefinitions>
@@ -61,9 +61,134 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Previous"/>
-                    <Button Grid.Column ="1" Content="Play/Pause"/>
-                    <Button Grid.Column ="2" Content="Next"/>
+                    <Button Grid.Column ="0"  Style="{x:Null}" Background="Transparent">
+                        <Image Margin="5" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                            <Image.Source>
+                                <DrawingImage>
+                                    <DrawingImage.Drawing>
+                                        <DrawingGroup>
+                                            <DrawingGroup.Children>
+                                                <GeometryDrawing Brush="#FFFFFFFF">
+                                                    <GeometryDrawing.Geometry>
+                                                        <PathGeometry
+                                        Figures="M-6.7993221396236,10.6456646530727  C-6.8137840396236,12.1943576513727  -5.2572579396235,12.4303011980727  -4.4357230396237,11.8462871870727  -2.0273232396236,10.1342003530727  6.8791709603764,3.5166465930727  9.4998937303764,1.6097421930728  10.4790468403764,0.8881798930727  10.4365882103764,-0.3804014069272  9.5838783603764,-1.2297859069272  6.7353720603765,-3.3245399069273  -1.0726113396236,-8.9057168069273  -4.4150531396236,-11.2746262069272  -5.2442055396236,-11.8622765069272  -6.7998865396236,-12.1865072069273  -6.7993221396236,-10.0942714069273  L-6.7993221396236,10.6456646530727  Z" >
+                                                            <PathGeometry.Transform>
+                                                                <TransformGroup>
+                                                                    <ScaleTransform/>
+                                                                    <SkewTransform/>
+                                                                    <RotateTransform/>
+                                                                    <TranslateTransform X="-5"/>
+                                                                </TransformGroup>
+                                                            </PathGeometry.Transform>
+                                                        </PathGeometry>
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                                <GeometryDrawing Brush="#FFFFFFFF">
+                                                    <GeometryDrawing.Geometry>
+                                                        <PathGeometry
+                                        Figures="M-6.7993221396236,10.6456646530727  C-6.8137840396236,12.1943576513727  -5.2572579396235,12.4303011980727  -4.4357230396237,11.8462871870727  -2.0273232396236,10.1342003530727  6.8791709603764,3.5166465930727  9.4998937303764,1.6097421930728  10.4790468403764,0.8881798930727  10.4365882103764,-0.3804014069272  9.5838783603764,-1.2297859069272  6.7353720603765,-3.3245399069273  -1.0726113396236,-8.9057168069273  -4.4150531396236,-11.2746262069272  -5.2442055396236,-11.8622765069272  -6.7998865396236,-12.1865072069273  -6.7993221396236,-10.0942714069273  L-6.7993221396236,10.6456646530727  Z" >
+                                                            <PathGeometry.Transform>
+                                                                <TransformGroup>
+                                                                    <ScaleTransform/>
+                                                                    <SkewTransform/>
+                                                                    <RotateTransform/>
+                                                                    <TranslateTransform X="5"/>
+                                                                </TransformGroup>
+                                                            </PathGeometry.Transform>
+                                                        </PathGeometry>
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                            </DrawingGroup.Children>
+
+                                        </DrawingGroup>
+                                    </DrawingImage.Drawing>
+                                </DrawingImage>
+                            </Image.Source>
+                        </Image>
+                    </Button>
+
+                    <Button Grid.Column ="1" Style="{x:Null}" Background="Transparent">
+                        <Image Margin="5">
+                            <Image.Source>
+                                <DrawingImage>
+                                    <DrawingImage.Drawing>
+                                        <DrawingGroup>
+                                            <DrawingGroup.Children>
+                                                <GeometryDrawing Brush="#FFFFFFFF">
+                                                    <GeometryDrawing.Geometry>
+                                                        <PathGeometry
+                                        Figures="M-6.7993221396236,10.6456646530727  C-6.8137840396236,12.1943576513727  -5.2572579396235,12.4303011980727  -4.4357230396237,11.8462871870727  -2.0273232396236,10.1342003530727  6.8791709603764,3.5166465930727  9.4998937303764,1.6097421930728  10.4790468403764,0.8881798930727  10.4365882103764,-0.3804014069272  9.5838783603764,-1.2297859069272  6.7353720603765,-3.3245399069273  -1.0726113396236,-8.9057168069273  -4.4150531396236,-11.2746262069272  -5.2442055396236,-11.8622765069272  -6.7998865396236,-12.1865072069273  -6.7993221396236,-10.0942714069273  L-6.7993221396236,10.6456646530727  Z" />
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                                <GeometryDrawing Brush="#FFFFFFFF">
+                                                    <GeometryDrawing.Geometry>
+                                                        <StreamGeometry>M3,3.0 C3,2.4,3.4,2,3.9,2 L5.0,2 C5.5,2,6,2.4,6,3.0 L6,12.9 C6,13.5,5.5,14,5.0,14 L3.9,14 C3.4,14,3,13.5,3,12.9 L3,3.0 Z M10,3.0 C10,2.4,10.4,2,10.9,2 L12.0,2 C12.5,2,13,2.4,13,3.0 L13,12.9 C13,13.5,12.5,14,12.0,14 L10.9,14 C10.4,14,10,13.5,10,12.9 L10,3.0 Z</StreamGeometry>
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                                    
+                                            </DrawingGroup.Children>
+
+                                        </DrawingGroup>
+                                    </DrawingImage.Drawing>
+                                </DrawingImage>
+                            </Image.Source>
+                        </Image>
+
+                    </Button>
+
+                    <Button Grid.Column ="2"  Style="{x:Null}" Background="Transparent">
+                        <Image Margin="5">
+                            <Image.Source>
+                                <DrawingImage>
+                                    <DrawingImage.Drawing>
+                                        <DrawingGroup>
+                                            <DrawingGroup.Children>
+                                                <GeometryDrawing Brush="#FFFFFFFF">
+                                                    <GeometryDrawing.Geometry>
+                                                        <PathGeometry
+                                        Figures="M-6.7993221396236,10.6456646530727  C-6.8137840396236,12.1943576513727  -5.2572579396235,12.4303011980727  -4.4357230396237,11.8462871870727  -2.0273232396236,10.1342003530727  6.8791709603764,3.5166465930727  9.4998937303764,1.6097421930728  10.4790468403764,0.8881798930727  10.4365882103764,-0.3804014069272  9.5838783603764,-1.2297859069272  6.7353720603765,-3.3245399069273  -1.0726113396236,-8.9057168069273  -4.4150531396236,-11.2746262069272  -5.2442055396236,-11.8622765069272  -6.7998865396236,-12.1865072069273  -6.7993221396236,-10.0942714069273  L-6.7993221396236,10.6456646530727  Z" >
+                                                            <PathGeometry.Transform>
+                                                                <TransformGroup>
+                                                                    <ScaleTransform/>
+                                                                    <SkewTransform/>
+                                                                    <RotateTransform/>
+                                                                    <TranslateTransform X="-5"/>
+                                                                </TransformGroup>
+                                                            </PathGeometry.Transform>
+                                                        </PathGeometry>
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                                <GeometryDrawing Brush="#FFFFFFFF">
+                                                    <GeometryDrawing.Geometry>
+                                                        <PathGeometry
+                                        Figures="M-6.7993221396236,10.6456646530727  C-6.8137840396236,12.1943576513727  -5.2572579396235,12.4303011980727  -4.4357230396237,11.8462871870727  -2.0273232396236,10.1342003530727  6.8791709603764,3.5166465930727  9.4998937303764,1.6097421930728  10.4790468403764,0.8881798930727  10.4365882103764,-0.3804014069272  9.5838783603764,-1.2297859069272  6.7353720603765,-3.3245399069273  -1.0726113396236,-8.9057168069273  -4.4150531396236,-11.2746262069272  -5.2442055396236,-11.8622765069272  -6.7998865396236,-12.1865072069273  -6.7993221396236,-10.0942714069273  L-6.7993221396236,10.6456646530727  Z" >
+                                                            <PathGeometry.Transform>
+                                                                <TransformGroup>
+                                                                    <ScaleTransform/>
+                                                                    <SkewTransform/>
+                                                                    <RotateTransform/>
+                                                                    <TranslateTransform X="5"/>
+                                                                </TransformGroup>
+                                                            </PathGeometry.Transform>
+                                                        </PathGeometry>
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                            </DrawingGroup.Children>
+
+                                        </DrawingGroup>
+                                    </DrawingImage.Drawing>
+                                </DrawingImage>
+                            </Image.Source>
+                        </Image>
+                    </Button>
                 </Grid>
                 <Grid  Grid.Column ="3">
                     <Grid.RowDefinitions>
@@ -75,7 +200,7 @@
                         <Button Content="-"/>
                         <Button Content="M"/>
                         <Button Content="T"/>
-                        <Button Content="x"/>
+                        <Button Content="x" IsCancel="True"/>
                     </StackPanel>
                 </Grid>
             </Grid>

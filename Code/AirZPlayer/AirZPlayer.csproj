@@ -82,6 +82,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands.cs" />
     <Compile Include="Configs\Config.cs" />
     <Compile Include="Configs\ConfigManager.cs" />
     <Compile Include="Exceptions\MusicExceptions.cs" />

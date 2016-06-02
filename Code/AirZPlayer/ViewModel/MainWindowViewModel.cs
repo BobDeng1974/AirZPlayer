@@ -21,9 +21,6 @@ namespace AirZPlayer
         }
         ObservableCollection<MusicsGroup> _currentMusicList;
 
-        public ICommand Pause { set; get; }
-        public ICommand Stop { set; get; }
-        public ICommand Play { set; get; }
         public FileDropHandler CustomDropHandler { get; set; }
 
     }
